@@ -1,0 +1,12 @@
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\bin\Debug\netcoreapp3.1\ProjectTest.Models.deps.json
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\bin\Debug\netcoreapp3.1\ProjectTest.Models.runtimeconfig.json
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\bin\Debug\netcoreapp3.1\ProjectTest.Models.runtimeconfig.dev.json
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\bin\Debug\netcoreapp3.1\ProjectTest.Models.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\bin\Debug\netcoreapp3.1\ProjectTest.Models.pdb
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\obj\Debug\netcoreapp3.1\ProjectTest.Models.csprojAssemblyReference.cache
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\obj\Debug\netcoreapp3.1\ProjectTest.Models.AssemblyInfoInputs.cache
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\obj\Debug\netcoreapp3.1\ProjectTest.Models.AssemblyInfo.cs
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\obj\Debug\netcoreapp3.1\ProjectTest.Models.csproj.CoreCompileInputs.cache
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\obj\Debug\netcoreapp3.1\ProjectTest.Models.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\obj\Debug\netcoreapp3.1\ProjectTest.Models.pdb
+D:\projecttest\ProjectTestWebApi\ProjectTest.Models\obj\Debug\netcoreapp3.1\ProjectTest.Models.genruntimeconfig.cache
