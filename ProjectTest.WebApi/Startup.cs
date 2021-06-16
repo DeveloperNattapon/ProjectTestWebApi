@@ -36,6 +36,8 @@ namespace ProjectTest.WebApi
             services.AddControllers();
             string ConnectionString = _configuration.GetConnectionString("BloggingDatabase");
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
+            services.AddDataProtection();
             services.AddSession();
            
             services.AddSwaggerGen(c =>
@@ -47,15 +49,38 @@ namespace ProjectTest.WebApi
             services.AddSingleton<IConfiguration>(_configuration);
             services.AddTransient<IProductServices, PersonsServices>();
             services.AddTransient<IStockServices, StockServices>();
+            services.AddTransient<IUserServices, UserServices>();
 
             services.AddDbContext<DBtestContext>(options =>
             {
                 options.UseSqlServer(ConnectionString);
                 options.EnableSensitiveDataLogging();
             });
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                                       .AllowAnyMethod()
+                                       .AllowAnyHeader());
+            });
+            services.AddOptions();
+            services.AddMvcCore(options =>
+            {
+                options.Filters.Add(new ProducesAttribute("application/json"));
+                options.Filters.Add(new ConsumesAttribute("application/json"));
+
+            })
+            .AddApiExplorer()
+            .AddFormatterMappings();
+            
             services.AddMemoryCache();
 
-            services.AddMvc();
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
         }
 
@@ -66,9 +91,12 @@ namespace ProjectTest.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            else {
+                app.UseHsts();
+            }
+            app.UseCors("CorsPolicy");
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -83,6 +111,8 @@ namespace ProjectTest.WebApi
                 c.SwaggerEndpoint("../swagger/v1/swagger.json", "My API V1");
             });
             //DummyData.Initialize(app);
+           
+           
         }
     }
 }
