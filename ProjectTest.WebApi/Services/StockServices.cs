@@ -51,13 +51,15 @@ namespace ProjectTest.WebApi.Services
             var stock = new List<StockEntity>();
             try
             {
-                stock = _context.stockEntities.Select(s => new StockEntity
-                {
-                    StockId = s.StockId,
-                    productId = s.productId,
-                    amount = s.amount
+                stock = _context.stockEntities.ToList();
 
-                }).ToList();
+                stock.ForEach(r => new StockEntity
+                {
+                    StockId = r.StockId,
+                    productId = r.productId,
+                    amount = r.amount
+                });
+
 
             }
             catch (Exception ex)

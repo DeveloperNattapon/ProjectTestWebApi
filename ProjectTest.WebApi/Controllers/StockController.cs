@@ -26,8 +26,17 @@ namespace ProjectTest.WebApi.Controllers
         public IActionResult GetStock()
         {
             IActionResult result = null;
-            var stock = new { stock = _stockServices.GetStock() };
-            result = WrapResponse.ResponseOK(stock);
+            try
+            {
+                var stock = _stockServices.GetStock() ;
+                result = WrapResponse.ResponseOK(stock);
+            }
+            catch (Exception ex)
+            {
+
+                result = WrapResponse.ResponseError(null, ex.Message);
+            }
+           
 
             return result;
         }
@@ -37,7 +46,7 @@ namespace ProjectTest.WebApi.Controllers
         public IActionResult AddStock([FromBody]StockEntity request) 
         {
             IActionResult result = null;
-            var stock = new { stock = _stockServices.AddStock(request) };
+            var  stock = _stockServices.AddStock(request);
             result = WrapResponse.ResponseOK(stock);
 
             return result;

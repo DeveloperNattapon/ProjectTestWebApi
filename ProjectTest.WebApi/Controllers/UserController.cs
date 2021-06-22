@@ -26,9 +26,40 @@ namespace ProjectTest.WebApi.Controllers
         [Route("SaveUserAccount")]
         public IActionResult SaveUserAccount([FromBody]UserRequestModel request)
         {
+            
             IActionResult result = null;
-            var stock = new { stock = _userServices.SaveUserAccount(request) };
-            result = WrapResponse.ResponseOK(stock);
+            try
+            {
+                var account =   _userServices.SaveUserAccount(request) ;
+                result = WrapResponse.ResponseOK(account);
+
+            }
+            catch (Exception ex)
+            {
+
+                result = WrapResponse.ResponseError(null,ex.Message);
+            }
+           
+            return result;
+        }
+
+        [HttpPost]
+        [Route("UserCheck")]
+        public IActionResult UserCheck([FromBody] UserRequestModel request)
+        {
+
+            IActionResult result = null;
+            try
+            {
+                var account = _userServices.UserCheck(request);
+                result = WrapResponse.ResponseOK(account);
+
+            }
+            catch (Exception ex)
+            {
+
+                result = WrapResponse.ResponseError(null, ex.Message);
+            }
 
             return result;
         }

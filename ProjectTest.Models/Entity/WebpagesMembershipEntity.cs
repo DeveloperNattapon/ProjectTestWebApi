@@ -14,7 +14,7 @@ namespace ProjectTest.Models
         [Column("ConfirmationToken")]
         public string ConfirmationToken { get; set; }
         [Column("IsConfirmed")]
-        public Byte IsConfirmed { get; set; }
+        public bool? IsConfirmed { get; set; }
         [Column("LastPasswordFailureDate")]
         public DateTime? LastPasswordFailureDate { get; set; }
         [Column("PasswordFailuresSinceLastSuccess")]
