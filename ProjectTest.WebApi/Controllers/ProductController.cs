@@ -23,7 +23,7 @@ namespace ProjectTest.WebApi.Controllers
         public IActionResult GetProduct()
         {
             IActionResult result = null;
-            var product = new { product = _productServices.GetProduct() };
+            var product =_productServices.GetProduct() ;
             result = WrapResponse.ResponseOK(product);
 
             return result;

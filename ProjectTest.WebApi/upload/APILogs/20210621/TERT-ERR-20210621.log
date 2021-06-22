@@ -1,0 +1,24 @@
+2021-06-21 16:45:11.557 +07:00 [Error] An exception occurred while iterating over the results of a query for context type '"ProjectTest.Models.DBtestContext"'."
+""System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.Byte'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Byte()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetByte(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.Byte'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Byte()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetByte(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2021-06-21 16:45:13.203 +07:00 [Error] Unable to cast object of type 'System.Boolean' to type 'System.Byte'.
+2021-06-21 16:45:51.485 +07:00 [Error] An exception occurred while iterating over the results of a query for context type '"ProjectTest.Models.DBtestContext"'."
+""System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.Byte'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Byte()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetByte(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()"
+System.InvalidCastException: Unable to cast object of type 'System.Boolean' to type 'System.Byte'.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_Byte()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetByte(Int32 i)
+   at lambda_method(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+2021-06-21 16:46:14.948 +07:00 [Error] Unable to cast object of type 'System.Boolean' to type 'System.Byte'.

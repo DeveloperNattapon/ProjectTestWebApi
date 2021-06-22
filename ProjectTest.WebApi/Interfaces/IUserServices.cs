@@ -10,5 +10,6 @@ namespace ProjectTest.WebApi.Interfaces
     public interface IUserServices
     {
         public ResponseModel SaveUserAccount(UserRequestModel request);
+        public ResponseModel UserCheck(UserRequestModel request);
     }
 }

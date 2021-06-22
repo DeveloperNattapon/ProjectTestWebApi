@@ -1,4 +1,5 @@
-﻿using ProjectTest.Models;
+﻿using Microsoft.Extensions.Logging;
+using ProjectTest.Models;
 using ProjectTest.Models.Request;
 using ProjectTest.WebApi.Interfaces;
 using System;
@@ -11,9 +12,11 @@ namespace ProjectTest.WebApi.Services
     public class UserServices : IUserServices
     {
         private readonly DBtestContext _context;
-        public UserServices(DBtestContext context)
+        private readonly ILogger<UserServices> _logger;
+        public UserServices(DBtestContext context, ILogger<UserServices> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public ResponseModel SaveUserAccount(UserRequestModel request)
@@ -60,15 +63,15 @@ namespace ProjectTest.WebApi.Services
                         }
 
                         dbContextTransaction.Commit();
-
-                        response.data = userid;
-                        response.success = true;
-                        response.message = "OK";
                     }
 
+                    response.data = userid;
+                    response.success = true;
+                    response.message = "OK";
                 }
                 catch (Exception ex)
                 {
+                    _logger.LogError(ex.Message);
                     dbContextTransaction.Rollback();
                     response.success = false;      
                     response.error = ex.Message;
@@ -76,6 +79,48 @@ namespace ProjectTest.WebApi.Services
             }
 
                 
+            return response;
+        }
+
+        public ResponseModel UserCheck(UserRequestModel request)
+        {
+            ResponseModel response = new ResponseModel();
+            try
+            {
+                UserEntity userid = _context.userEntities.Where(w => w.UserName == request.UserName.Trim()).FirstOrDefault();
+
+                if (userid != null)
+                {
+
+                    WebpagesMembershipEntity members = _context.membershipEntities.Where(w => w.UserId == userid.UsersID && w.Password == request.Password).FirstOrDefault();
+
+                    if (members != null)
+                    {
+                        response.data = members;
+                        response.success = true;
+                        response.message = "ยินดีต้อนรับ" + userid.RealName;
+                    }
+                    else 
+                    {
+                        response.success = false;
+                        response.message = "รหัสไม่ถูกต้อง";
+                    }
+                }
+                else 
+                {
+                    response.message = "ไม่พบ ผู้ใช้งานนี้" + request.UserName;
+                    response.success = false; 
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+                response.success = false;
+                response.error = ex.Message;
+            }
+
             return response;
         }
     }

@@ -12,8 +12,11 @@ using ProjectTest.Models;
 using ProjectTest.Models.DAL;
 using ProjectTest.WebApi.Interfaces;
 using ProjectTest.WebApi.Services;
+using Serilog;
+using Serilog.Events;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -85,8 +88,36 @@ namespace ProjectTest.WebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,ILoggerFactory logger)
         {
+            var appPath = Directory.GetCurrentDirectory();
+
+            var dirLog = Path.Combine(appPath, "upload", "APILogs", DateTime.Now.ToString("yyyyMMdd"));
+            if (String.IsNullOrEmpty(dirLog) == false)
+            {
+                if (Directory.Exists(dirLog) == false)
+                {
+                    Directory.CreateDirectory(dirLog);
+                }
+                var logName = Path.Combine(dirLog, "TERT-{Date}.log");
+                var logINF = Path.Combine(dirLog, "TERT-INF-{Date}.log");
+                var logDEB = Path.Combine(dirLog, "TERT-DEB-{Date}.log");
+                var logERR = Path.Combine(dirLog, "TERT-ERR-{Date}.log");
+                //logger.AddFile(logName);
+                Log.Logger = new LoggerConfiguration()                        
+                                  .MinimumLevel.Information()
+                                  .MinimumLevel.Override("Microsoft", LogEventLevel.Error)
+                                  .MinimumLevel.Override("System", LogEventLevel.Error)
+                                  .Enrich.FromLogContext()
+                                  .WriteTo.Logger(l => l.Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Information).WriteTo.RollingFile(logINF))
+                                  .WriteTo.Logger(l => l.Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Debug).WriteTo.RollingFile(logDEB))
+                                  .WriteTo.Logger(l => l.Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Error).WriteTo.RollingFile(logERR))
+                                  .CreateLogger();
+                //logger.AddDebug();
+                logger.AddSerilog();
+            }
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -111,8 +142,14 @@ namespace ProjectTest.WebApi
                 c.SwaggerEndpoint("../swagger/v1/swagger.json", "My API V1");
             });
             //DummyData.Initialize(app);
-           
-           
+
+            var path = Path.Combine(appPath, "upload", "APILogs");
+            var dir = Directory.Exists(path);
+            if (!dir)
+            {
+                Directory.CreateDirectory(path);
+            }
+
         }
     }
 }

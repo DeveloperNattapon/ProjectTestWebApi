@@ -68,3 +68,17 @@ D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\Proj
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.dll
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.pdb
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.genruntimeconfig.cache
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
