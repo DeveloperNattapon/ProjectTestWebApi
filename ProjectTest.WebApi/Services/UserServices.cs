@@ -36,7 +36,7 @@ namespace ProjectTest.WebApi.Services
                         {
                             UserName = request.UserName,
                             EmailAddress = request.EmailAddress,
-                            RealName = null,
+                            RealName = request.RealName,
                             ModifiedDate = DateTime.Now
                         };
 
@@ -96,7 +96,20 @@ namespace ProjectTest.WebApi.Services
 
                     if (members != null)
                     {
-                        response.data = members;
+
+                        var data = (from a in _context.userEntities
+                                    from b in _context.membershipEntities.Where(w => w.UserId == a.UsersID).DefaultIfEmpty()
+                                    where a.UsersID == userid.UsersID && b.UserId == userid.UsersID
+                                    select new
+                                    {
+                                        UsersID = a.UsersID,
+                                        RealName = a.RealName,
+                                        UserName = a.UserName
+
+                                    }).FirstOrDefault();
+                        
+                        
+                        response.data = data;
                         response.success = true;
                         response.message = "ยินดีต้อนรับ" + userid.RealName;
                     }
