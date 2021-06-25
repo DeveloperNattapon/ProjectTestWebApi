@@ -1943,7 +1943,8 @@
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
-          "Microsoft.EntityFrameworkCore.UnitOfWork": "3.1.0"
+          "Microsoft.EntityFrameworkCore.UnitOfWork": "3.1.0",
+          "Serilog.Sinks.RollingFile": "3.3.0"
         },
         "compile": {
           "bin/placeholder/ProjectTest.Models.dll": {}
