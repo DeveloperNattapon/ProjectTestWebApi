@@ -44,6 +44,7 @@ namespace ProjectTest.WebApi.Services
             }
 
             return response;
+            
         }
 
         public List<StockEntity> GetStock()
