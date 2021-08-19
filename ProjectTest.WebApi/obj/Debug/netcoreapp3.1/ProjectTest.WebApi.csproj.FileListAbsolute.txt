@@ -54,7 +54,6 @@ D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\runt
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\ProjectTest.Models.dll
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\ProjectTest.Models.pdb
-D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.csprojAssemblyReference.cache
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.AssemblyInfoInputs.cache
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.AssemblyInfo.cs
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.csproj.CoreCompileInputs.cache
@@ -82,3 +81,17 @@ D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Seri
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
 D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.AspNetCore.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AI.DependencyCollector.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AI.EventCounterCollector.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AI.PerfCounterCollector.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AI.WindowsServer.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.AI.ServerTelemetryChannel.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.ApplicationInsights.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.csproj.AssemblyReference.cache
+D:\projecttest\ProjectTestWebApi\ProjectTest.WebApi\obj\Debug\netcoreapp3.1\ProjectTest.WebApi.GeneratedMSBuildEditorConfig.editorconfig
